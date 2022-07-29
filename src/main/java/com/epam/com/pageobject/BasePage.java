@@ -7,14 +7,14 @@ public class BasePage {
 
     protected WebDriver driver;
 
-//    public BasePage (WebDriver driver) {
-//
-//        this.driver = driver;
-//    }
+    public BasePage (WebDriver driver) {
 
-    protected BasePage(WebDriver driver) {
         this.driver = driver;
-        PageFactory.initElements(driver, this);
     }
+
+//    protected BasePage(WebDriver driver) {
+//        this.driver = driver;
+//        PageFactory.initElements(driver, this);
+//    }
 
 }
