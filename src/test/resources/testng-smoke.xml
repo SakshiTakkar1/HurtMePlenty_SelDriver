@@ -1,9 +1,14 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="Smoke" verbose="1" >
-    <test name="UserAccess"   >
+    <test name="HurtPlenty"   >
         <classes>
-<!--            <class name="com.epam.ta.test.UserAccessTests" />-->
+            <class name="com.epam.com.HurtPlentyPOBTest">
+            <methods>
+            <include name="testWithPOM()"></include>
+            </methods>
+            </class>
+
         </classes>
     </test>
 </suite>
