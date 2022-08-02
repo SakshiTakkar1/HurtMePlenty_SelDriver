@@ -9,7 +9,7 @@ public class PropertyHolder {
 
     {
         try(FileInputStream fis = new FileInputStream(
-                "src/test/resources/browser.properties")) {
+                "src/test/resources/features/browser.properties")) {
             properties.load(fis);
         } catch (IOException e) {
             System.err.println(e.getMessage());

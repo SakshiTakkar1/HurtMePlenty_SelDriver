@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class HomePage extends BasePage {
 
@@ -12,9 +13,15 @@ public class HomePage extends BasePage {
 
     public static final String PAGE_URL = "https://cloud.google.com/";
 
+    @FindBy(className = "devsite-search-form")
+    WebElement devSiteSearch;
+    //private By devSiteSearch = By.className("devsite-search-form");
 
-    private By devSiteSearch = By.className("devsite-search-form");
-    private By googleSearch = By.xpath("//input[@class='devsite-search-field devsite-search-query']");
+
+
+    @FindBy(xpath = "//input[@class='devsite-search-field devsite-search-query']")
+    WebElement googleSearch;
+    //private By googleSearch = By.xpath("//input[@class='devsite-search-field devsite-search-query']");
 
 
     public HomePage(WebDriver driver) {
@@ -27,12 +34,13 @@ public class HomePage extends BasePage {
     }
 
     public void clickOnSearch(){
-        driver.findElement(devSiteSearch).click();
+        devSiteSearch.click();
+        //driver.findElement(devSiteSearch).click();
     }
 
     public void googleSearch(String keyForGoogleCloud) throws InterruptedException {
 
-        WebElement textForGoogleSearch = driver.findElement(googleSearch);
+        WebElement textForGoogleSearch = googleSearch;
         textForGoogleSearch.click();
         textForGoogleSearch.sendKeys(keyForGoogleCloud);
         textForGoogleSearch.sendKeys(Keys.ENTER);

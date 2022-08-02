@@ -3,11 +3,15 @@ package com.epam.com.pageobject;
 import com.epam.com.pageobject.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class SearchResultGoogleCloudPage extends BasePage {
 
 
-    private By switchToCalculator = By.xpath("//b[text()='Google Cloud Pricing Calculator']");
+    @FindBy(xpath = "//b[text()='Google Cloud Pricing Calculator']")
+    WebElement switchToCalculator;
+    //private By switchToCalculator = By.xpath("//b[text()='Google Cloud Pricing Calculator']");
 
 
     public SearchResultGoogleCloudPage(WebDriver driver) {
@@ -16,8 +20,7 @@ public class SearchResultGoogleCloudPage extends BasePage {
     }
 
     public void clickOnGoogleCloudPlatformLink() throws InterruptedException {
-
-        driver.findElement(switchToCalculator).click();
+        switchToCalculator.click();
         Thread.sleep(5000);
     }
 }
