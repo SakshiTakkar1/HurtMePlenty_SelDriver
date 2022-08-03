@@ -157,6 +157,7 @@ public class CalculatorPage extends BasePage {
     }
 
     public void selectInstanceField(String numberOfInstances) throws InterruptedException {
+
         //WebElement numberOfInstancesField = driver.findElement(instancesField);
         instancesField.sendKeys(numberOfInstances);
         Thread.sleep(5000);

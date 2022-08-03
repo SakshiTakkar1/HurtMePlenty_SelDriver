@@ -1,10 +1,7 @@
 package com.epam.com;
 
 import com.epam.com.factory.WebDriverFactory;
-import com.epam.com.pageobject.CalculatorPage;
-import com.epam.com.pageobject.HomePage;
-import com.epam.com.pageobject.ScreenshotPage;
-import com.epam.com.pageobject.SearchResultGoogleCloudPage;
+import com.epam.com.pageobject.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.ITestResult;
@@ -21,6 +18,8 @@ public abstract class BaseTest {
 
     protected static ScreenshotPage screenshotPage;
 
+    protected static SmokePage smokePage;
+
     @BeforeTest
     public static void driverSetup() {
         // WebDriverManager.chromedriver().setup();
@@ -28,9 +27,12 @@ public abstract class BaseTest {
         driver = new WebDriverFactory().getWebDriver();
         driver.manage().window().maximize();
         homePage = new HomePage(driver);
+        homePage.openCloudPage();
         searchResultGoogleCloudPage = new SearchResultGoogleCloudPage(driver);
         calculatorPage = new CalculatorPage(driver);
         screenshotPage = new ScreenshotPage(driver);
+        smokePage = new SmokePage(driver);
+
 
     }
 

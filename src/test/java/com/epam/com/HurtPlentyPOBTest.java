@@ -1,5 +1,8 @@
 package com.epam.com;
 
+import Service.CalculatorCreator;
+import com.epam.com.model.Calculator;
+import com.epam.com.model.CalculatorModel;
 import com.epam.com.pageobject.CalculatorPage;
 import org.testng.Assert;
 import org.testng.ITestResult;
@@ -7,18 +10,24 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import java.io.IOException;
+
 public class HurtPlentyPOBTest extends BaseTest{
 
 
 
     @Test
-    public void testWithPOM() throws InterruptedException {
+    public void testWithPOM() throws InterruptedException, IOException {
+
+
+
         homePage.openCloudPage();
         homePage.clickOnSearch();
         homePage.googleSearch("Google Cloud Platform Pricing Calculator");
         searchResultGoogleCloudPage.clickOnGoogleCloudPlatformLink();
         calculatorPage.ComputeEngineFrame();
-        calculatorPage.selectInstanceField("4");
+        calculatorPage.selectInstanceField(new CalculatorModel().getCalculatorData().getNumberOfInstances());
+
         calculatorPage.selectSeriesOfMachine();
         calculatorPage.selectMachineType();
         calculatorPage.clickAddGpusCheckBox();

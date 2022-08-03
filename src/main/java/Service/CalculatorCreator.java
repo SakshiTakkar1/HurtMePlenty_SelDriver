@@ -17,11 +17,11 @@ public class CalculatorCreator {
 
 
 
-    public static Calculator withCredentialsFromProperty() {
+  /*  public static Calculator withCredentialsFromProperty() {
         return new Calculator(TestDataReader.getTestData(NUMBER_OF_INSTANCES), TestDataReader.getTestData(OPERATING_SYSTEM),
                 TestDataReader.getTestData(MACHINE_CLASS), TestDataReader.getTestData(MACHINE_SERIES), TestDataReader.getTestData(MACHINE_TYPE),
                 TestDataReader.getTestData(GPU_TYPE), TestDataReader.getTestData(NUMBER_OF_GPUS),
                 TestDataReader.getTestData(LOCAL_SSD), TestDataReader.getTestData(DATACENTER_LOCATION),
                 TestDataReader.getTestData(COMMITTED_USAGE));
-    }
+    }*/
 }

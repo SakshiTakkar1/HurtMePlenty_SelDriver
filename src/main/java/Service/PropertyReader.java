@@ -6,12 +6,12 @@ import java.util.Properties;
 
 public class PropertyReader {
 
-    public static void main(String[] args) throws IOException {
+    public static String readProperty(String key) throws IOException {
         FileReader fileReader= new FileReader(
-                "C:\\Users\\Sakshi_Kumari\\IdeaProjects\\HurtMePlenty_SelDriver\\src\\test\\resources\\features\\browser.properties");
+                "C:\\Users\\Sakshi_Kumari\\IdeaProjects\\HurtMePlenty_SelDriver\\src\\test\\resources\\qa.properties");
         Properties properties= new Properties();
         properties.load(fileReader);
-        System.out.println(properties.getProperty("browser"));
+        return properties.getProperty(key);
     }
 
 }
