@@ -1,5 +1,7 @@
 package com.epam.com.model;
 
+import org.checkerframework.checker.units.qual.C;
+
 import java.util.Objects;
 
 public class Calculator {
@@ -16,6 +18,11 @@ public class Calculator {
 //    private String committedUsage;
 //
 //
+
+    public Calculator(String numberOfInstances)
+    {
+        this.numberOfInstances = numberOfInstances;
+    }
 
     /*public Calculator(String numberOfInstances, String operatingSystem, String machineClass, String machineSeries, String machineType,
                       String numberOfGpus, String gpuType, String localSSD, String datacenterLocation,

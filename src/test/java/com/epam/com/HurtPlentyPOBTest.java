@@ -1,10 +1,6 @@
 package com.epam.com;
 
-import Service.CalculatorCreator;
-import com.epam.com.model.Calculator;
-import com.epam.com.model.CalculatorModel;
-import com.epam.com.pageobject.CalculatorPage;
-import org.testng.Assert;
+import Service.CalculatorModel;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;

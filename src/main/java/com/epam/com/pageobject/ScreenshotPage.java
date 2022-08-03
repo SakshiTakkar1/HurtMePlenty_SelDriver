@@ -31,7 +31,7 @@ public class ScreenshotPage extends BasePage {
             // Copy method  specific location here it will save all screenshot in our project home directory and
             // result.getName() will return name of test case so that screenshot name will be same
             try {
-                FileHandler.copy(ts.getScreenshotAs(OutputType.FILE), new File("C:\\Selenium\\" + timestamp() + ".png"));
+                FileHandler.copy(ts.getScreenshotAs(OutputType.FILE), new File(".//tfolder/screenshots/" + timestamp() + ".png"));
             } catch (WebDriverException e) {
 
             } catch (IOException e) {

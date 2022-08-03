@@ -5,5 +5,18 @@
         <packages>
             <package name="com.epam.com" />
         </packages>
+        <classes>
+            <class name="com.epam.com.HurtPlentyPOBTest">
+
+            </class>
+            <class name="com.epam.com.SmokeTest">
+                <methods>
+                    <exclude name="isPageVisible()"></exclude>
+                    <exclude name="isHeaderVisible()"></exclude>
+                    <exclude name="isCalculatorPageTitleVisible()"></exclude>
+                    <exclude name="isInstanceTitleVisible()"></exclude>
+                </methods>
+            </class>
+        </classes>
     </test>
 </suite>
