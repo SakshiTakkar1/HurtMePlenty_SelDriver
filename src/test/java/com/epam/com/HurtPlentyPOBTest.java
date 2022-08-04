@@ -1,6 +1,6 @@
 package com.epam.com;
 
-import Service.CalculatorModel;
+import com.epam.com.Service.CalculatorModel;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;

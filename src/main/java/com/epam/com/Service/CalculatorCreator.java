@@ -1,4 +1,4 @@
-package Service;
+package com.epam.com.Service;
 
 import com.epam.com.model.Calculator;
 

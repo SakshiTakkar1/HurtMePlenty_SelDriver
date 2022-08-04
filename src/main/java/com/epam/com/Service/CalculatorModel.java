@@ -1,6 +1,5 @@
-package Service;
+package com.epam.com.Service;
 
-import Service.PropertyReader;
 import com.epam.com.model.Calculator;
 
 import java.io.IOException;
