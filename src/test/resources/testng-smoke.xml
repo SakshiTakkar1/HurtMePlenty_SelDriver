@@ -6,6 +6,9 @@
 
             <class name="com.epam.com.SmokeTest">
                 <methods>
+                    <include name="isPageVisible"></include>
+                    <include name="isHeaderVisible"></include>
+                    <include name="isCalculatorPageTitleVisible"></include>
                     <include name="isInstanceTitleVisible"></include>
                 </methods>
             </class>
