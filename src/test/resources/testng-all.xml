@@ -7,7 +7,11 @@
         </packages>
         <classes>
             <class name="com.epam.com.HurtPlentyPOBTest">
+                <methods>
+                    <include name="testWithPOM()"></include>
+                    <include name="checkVMClassAssert()"></include>
 
+                </methods>
             </class>
             <class name="com.epam.com.SmokeTest">
                 <methods>
